@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <link rel="stylesheet" href="../css/Mothly_Report.css">
+    <link rel="stylesheet" href="../css/taskbar.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="header">
+             
+        <div class="header_item">
+            <ul id="item">
+                <li class="itemhd">
+                    <div id="home"><i class="fa-solid fa-house"></i></i></div>
+                    <div id="bcao">
+                        Báo Cáo
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul id="listitem">
+                        <li class="li">Báo cáo tháng</li>
+                        <li class="li">Báo cáo năm</li>
+                        <li class="li">Báo cáo theo danh mục</li>
+                        </ul>
+                    </div>
+                    <P>
+                       Xuất dữ liệu
+                    </P>
+                    <p class="header-info js-info">
+                        Về chúng tôi
+                     </p>
+                    
+                </li>
+                <div  class="header__item-logo">
+                    <div class="header__search ">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm khoản chi tiêu">
+
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                    <div class="header__search-history-list">
+                                        <p class="header__search-history-item">
+                                            <a href="#">Ăn trưa</a>
+                                        </p>
+                                        <p class="header__search-history-item">
+                                            <a href="#">iphone 12</a>
+                                        </p>
+                                        <p class="header__search-history-item">
+                                            <a href="#">iphone 13</a>
+                                        </p>
+                                        <p class="header__search-history-item">
+                                            <a href="#">iphone 14</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <button class="header__search-btn btn--bland js-noti">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+                <div id="trangcanhan">
+                    <div id="avatar">
+                        <img src="../image/z4151984911407_d5bc2788f900a9267c4ccfc5aa49d50f.jpg" alt="avatar">
+                       
+                    </div>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <div id="list">
+                        <ul>
+                            <li id="tcnhan">
+                                <i class="fa-solid fa-house-user"></i>
+                                Trang cá nhân</li>
+                            <li id="logout">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Log out</li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="modal js-show_info ">
+        <div class="modal__body">
+                <div class="auth-form js-auth-form auth-form-info ">  
+                    <div class="header-info">
+                        <h1 class="tilte-info">THÀNH VIÊN NHÓM</h1>
+                        <i class="fas fa-window-close js-info-close"></i>
+                    </div>
+                    <p>
+                        1.
+                        <a target="_blank" href="#" >Nguyễn Thị Thu Hà</a>
+                    </p>
+                    <p>
+                        2.
+                        <a target="_blank" href="#" >Trần Minh Đức</a>
+                    </p>
+                    <p>
+                        3.
+                        <a target="_blank" href="#" >Nguyễn Phương Đại</a>
+                    </p>
+                    <p>
+                        4.
+                        <a target="_blank" href="#" >Nguyễn Thành Nam</a>
+                    </p>
+                    <p>
+                        5.
+                        <a target="_blank" href="https://ximvhs.github.io/frofile/">Vũ Hồng Sơn</a>
+                    </p>
+                </div>
+        </div>
+    </div>
+    <div class="grid wide">
+        <div class="buttons">
+            <button class="btn1">Tiền chi</button>
+            <button class="btn2">Tiền thu</button>
+            <button class="btn3">Tổng tiền</button>
+        </div>
+        <div id="ctent">
+            <div class="chart">
+                <div id="number">
+                    <ul class="numbers">
+                        <li><span>2.500.000đ</span></li>
+                        <li><span>2.000.000đ</span></li>
+                        <li><span>1.500.000đ</span></li>
+                        <li><span>1.000.000đ</span></li>
+                        <li><span>500.000đ</span></li>
+                        <li><span>0đ</span></li>
+                    </ul>
+                </div>
+                <div id="bars">
+                    <ul class="bars">
+                        <li><div class="bar" data-vnd="2100000"></div><span>Ăn uống</span></li>
+                        <li><div class="bar" data-vnd="700000"></div><span>Đi lại</span></li>
+                        <li><div class="bar" data-vnd="1300000"></div><span>Quần áo</span></li>
+                        <li><div class="bar" data-vnd="800000"></div><span>Mỹ phẩm</span></li>
+                        <li><div class="bar" data-vnd="750000"></div><span>Khác</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <script type="text/javascript">
+                $(function() {
+                    $('.bars li .bar').each(function(key,bar) {
+                        var vnd = $(this).data('vnd');
+                        $(this).animate({
+                            'height': vnd/9500 + 'px'
+                        },1000);
+                    });
+                });
+            </script>
+        <div class="sum">
+            <div class="total">
+                <span>Tổng: </span>
+                <p class="price">5.650.000đ</p>
+            </div>
+            <div class="list-categ">
+                <div class="categ">
+                    <span>Ăn uống: </span>
+                    <p class="price">2.100.000đ</p>
+                </div>
+                <div class="categ">
+                    <span>Đi lại: </span>
+                    <p class="price">700.000đ</p>
+                </div>
+                <div class="categ">
+                    <span>Quần áo: </span>
+                    <p class="price">1.300.000đ</p>
+                </div>
+                <div class="categ">
+                    <span>Mỹ phẩm: </span>
+                    <p class="price">800.000đ</p>
+                </div>
+                <div class="categ">
+                    <span>Khác: </span>
+                    <p class="price">750.000đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://kit.fontawesome.com/22b1ad7ec4.js" crossorigin="anonymous"></script>
+<script src="../js/taskbar.js"></script>
+</html>

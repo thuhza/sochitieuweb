@@ -1,0 +1,336 @@
+
+
+#main{
+    display: flex;
+}
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.calendar {
+    position: relative;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.calendar h1 {
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+.btn-prev, .btn-next {
+    height: 32px;
+    width: 50px;
+    font-size: 16px;
+}
+
+.info {
+    height: 20px;
+    margin-top: 16px;
+    padding: 0 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.info .month {
+    margin-right: 12px;
+}
+
+.info p {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: double;
+}
+
+.day {
+    width: calc(100%/7);
+    height: 50px;
+    text-align: center;
+
+}
+.day-name {
+    width: calc(100%/7);
+    /* height: 50px; */
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+}
+#nepre{
+    display: flex;
+}
+#nepre div{
+    flex:1;
+}
+#btnleft{
+    display: flex;
+    justify-content: flex-end;
+}
+.day.active {
+   background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: var(--border-box);
+}
+#ctent{
+    width: 100%;
+}
+#ctentthu,#ctentchi{
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--primary-color);
+    border-style:solid;
+    border-color: var(--secondary-color);
+}
+
+#ctent input{
+    height: 32px;
+    outline: var(--secondary-color);
+    border: solid 2px var(--secondary-color);
+}
+
+#contaner,#nhap{
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+}
+#lich{
+    display: flex;
+}
+#nhap{
+    flex-direction: column;
+    align-items: center;
+}
+#option{
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 3px;
+    border-color: var(--secondary-color);
+    border-radius: var(--border-box);
+}
+.thu{
+    background-color: var(--secondary-color);
+    color: white;
+}
+.chi{
+    background-color: var(--secondary-color);
+    color: white;
+    
+}
+.thu:hover,.chi:hover{
+cursor: pointer;
+opacity: 0.6;
+}
+.chi.hide{
+    color: var(--secondary-color);
+    background-color: white;
+}
+#option p{
+    margin: 0;
+    padding: 5px 20px;
+     
+}
+#ctent{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+}
+#ctentthu> p,#ctentchi> p{
+     margin: 10px;
+     display: flex;
+     align-items: center;
+     height: 40px;
+}
+#ctentthu >p t,#ctentchi >p t,#ctentthu >p input,.danhmuc t,.datenw span{
+    font-size: 20px;
+    font-family: monospace;
+   
+}
+.datenw t,.datenw span{
+    flex: 1 1;
+}
+.note t,.giatri t{
+    width: 130px;
+    line-height: 40px;
+}
+.note input,.giatri input{
+    width: -webkit-fill-available;
+}
+#thongke{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+}
+#tthu,#tchi,#tong{
+    flex: 1 1;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    border-style:solid;
+    border-width: 2px;
+    border-color: var(--secondary-color);
+}
+.tde{
+    display: flex;
+    align-items: center;
+}
+
+.tde h3{
+    flex: 1 1;
+    margin: 0;
+}
+.gtri{
+    display: flex;
+    justify-content: flex-end;
+}
+.chitiet{
+    height: 160px;
+    padding: 5px;
+    border-style: groove;
+    max-height: 30vh;
+    overflow-y: auto; 
+}
+
+/* Bỏ thanh cuộn trên Chrome và Safari */
+.chitiet::-webkit-scrollbar {
+    display: none;
+}
+#tong .tde{
+    height: 100%;
+    align-items: center;
+}
+.ndg{
+    display: flex;
+    height: 20px;
+    align-items: center;
+}
+
+.chitiet .ndg:last-child{
+    border: none;
+}
+
+.ndg  {
+    margin: 0;
+    border-bottom: solid 1px var(--border-color);
+
+}
+
+.gia{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dsitem{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    margin: 5px 5px;
+    flex-direction: column;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    align-items: center;
+    height: fit-content;
+    transition: all 0.2s linear;
+}
+
+.item i {
+    padding: 5px 0 0 0;
+}
+
+.item:hover {
+    /* opacity: 0.7; */
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.danhmuc {
+    margin: 0 10px;
+}
+
+.item i{
+    font-size: 25px;
+}
+
+.item p{
+    margin: 5px 5px;
+    font-weight: bold;
+}
+.dmuc,.gia{
+    flex: 1 1;
+}
+.ctenthu.hide{
+    display: none;
+}
+
+.ctenchi.hide{
+    display: none;
+}
+
+/* modal */
+.itemhd button {
+    height: 35px;
+    width: 90px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-box);
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.itemhd button:hover {
+    opacity: 0.8;
+}
+
+.btnAdd{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+.btnAdd button{
+    background-color:var(--secondary-color);;
+    color: white;
+    border: 0;
+}
+.btnAdd button:hover{
+    cursor: pointer;
+}
+.item.active{
+    color: var(--secondary-color);
+}
+#tk{
+    display: flex;
+}
+#datesm{
+    display: flex;
+    justify-content: center;
+}
